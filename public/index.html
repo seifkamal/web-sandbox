@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Playground</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <textarea id="html">
+<h1>Hi There</h1>
+<p>This is a simple web playground.</p>
+<p>Time: <time>Loading...</time></p></textarea
+        >
+        <textarea id="js">
+const formatter = new Intl.DateTimeFormat('en', {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+})
+
+window.addEventListener("DOMContentLoaded", () => {
+  const time = document.querySelector('time');
+
+  setInterval(() => {
+    time.textContent = formatter.format(new Date());
+  }, 1_000);
+})</textarea
+        >
+        <textarea id="css">
+html {
+  font-family: sans-serif;
+  background-color: ghostwhite;
+}
+
+body {
+  max-width: 60ch;
+  margin-inline: auto;
+}</textarea
+        >
+      </form>
+      <output id="output"></output>
+    </main>
+  </body>
+</html>
