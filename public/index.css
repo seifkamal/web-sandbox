@@ -1,5 +1,8 @@
 :root {
-  --c-neutral: lavender;
+  --c-bg: lavender;
+  --c-html: orangered;
+  --c-css: cornflowerblue;
+  --c-js: gold;
 }
 
 *,
@@ -33,30 +36,30 @@ textarea {
   padding: 1rem;
   border: none;
   color: color-mix(in hsl, transparent, black);
-  border-right: 2px solid var(--c-neutral);
+  border-right: 2px solid var(--c-bg);
   border-bottom: 2px solid
-    color-mix(in hsl, transparent, var(--c-bb, var(--c-neutral)));
+    color-mix(in hsl, transparent, var(--c-bb, var(--c-bg)));
   transition: color 300ms, border-color 300ms, background-color 300ms;
-  box-shadow: inset -10px 0 16px -8px var(--c-neutral);
+  box-shadow: inset -10px 0 16px -8px var(--c-bg);
 }
 
 textarea:focus-visible {
   outline: none;
   color: black;
-  background-color: color-mix(in hsl, transparent, var(--c-neutral) 20%);
+  background-color: color-mix(in hsl, transparent, var(--c-bg) 20%);
   border-right-color: color-mix(in hsl, transparent, var(--c-br));
 }
 
 #html {
-  --c-br: orangered;
+  --c-br: var(--c-html);
 }
 
 #js {
-  --c-br: gold;
+  --c-br: var(--c-js);
 }
 
 #css {
-  --c-br: cornflowerblue;
+  --c-br: var(--c-css);
   --c-bb: transparent;
 }
 
